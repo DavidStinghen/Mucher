@@ -30,6 +30,7 @@ GIPHY_KEY='AQUI VAI A CHAVE GERADA PELO GIPHY'
 
 - E para finalizar, esteja na raiz do projeto, inicialize o Docker e execute os comandos abaixo para construir e executar a api:
 ```
+$ yarn
 $ docker-compose build
 $ docker-compose up
 ```
