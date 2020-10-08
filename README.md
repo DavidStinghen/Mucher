@@ -5,7 +5,7 @@ Além da construção da funcionalidade já citada foram implementadas medidas d
 
 ## Instalação
 
-Para a instalação da api será necessário que você tenha instalado em sua maquina o ([Docker](https://docs.docker.com/get-docker/)), o ([Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)), o ([Git](https://git-scm.com/downloads)) e por fim será necessário criar uma conta no ([Giphy](https://developers.giphy.com/)) para gerar uma chave acesso a api de gifs ([crie a chave aqui!](https://developers.giphy.com/dashboard/)). Após a instalação das dependências siga os passos como demonstrado abaixo:
+Para a instalação da api será necessário que você tenha instalado em sua maquina o ([Docker](https://docs.docker.com/get-docker/)), o ([Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)), o ([Git](https://git-scm.com/downloads)) e por fim será necessário criar uma conta no ([Giphy](https://developers.giphy.com/)) para gerar uma chave de acesso a api de gifs ([crie a chave aqui!](https://developers.giphy.com/dashboard/)). Após a instalação das dependências siga os passos como demonstrado abaixo:
 
 - Clone o diretório do projeto:
 ```
@@ -25,23 +25,24 @@ APP_PORT='ESCOLHA UMA PORTA'
 #SERVICES
 RECIPES_URL='http://www.recipepuppy.com/api'
 GIPHY_URL='https://api.giphy.com/v1/gifs/search'
-GIPHY_KEY='AQUI VAI A CHAVE GERADO PELO GIPHY'
+GIPHY_KEY='AQUI VAI A CHAVE GERADA PELO GIPHY'
 ```
 
-- E para finalizar esteja na raiz do projeto, inicialize o Docker e execute os comandos abaixo para construir e executar a api:
+- E para finalizar, esteja na raiz do projeto, inicialize o Docker e execute os comandos abaixo para construir e executar a api:
 ```
+$ yarn
 $ docker-compose build
 $ docker-compose up
 ```
 
-##Execução
+## Execução
 
 Após iniciar a api será possível realizar requisições para a seguinte rota:
 ```
 http://{HOST}/recipes/?i={ingredient_1},{ingredient_2}
 ```
 
-A resposta a rota citada acimda deve se parecer com o conteudo abaixo:
+A resposta a rota citada acima deve se parecer com o conteudo abaixo:
 ```
 {
 	"keywords": ["onion", "tomato"],
